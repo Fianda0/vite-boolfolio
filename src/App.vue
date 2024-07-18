@@ -25,24 +25,24 @@ export default {
 <template>
   <div class="container">
     <div class="row">
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-          </div>
-          <div v-for="progetto in this.projects.data">
-            {{ progetto.titolo }}
-            <br>
+      <div class="col-12 d-flex flex-wrap">
+
+        <div v-for="progetto in this.projects.data">
+
+          <div class="card" style="width: 18rem;">
             <div v-if="progetto.immagine.startsWith('http')">
 
-              <img :src="progetto.immagine" alt="">
+              <img :src="progetto.immagine" class="card-img-top" alt="">
             </div>
             <div v-else>
 
-              <img :src="url + 'storage/' + progetto.immagine" alt="">
+              <img :src="url + 'storage/' + progetto.immagine" class="card-img-top" alt="">
             </div>
-            <br>
-
+            <div class="card-body">
+              <p class="card-text">{{ progetto.titolo }}.</p>
+            </div>
           </div>
+
         </div>
 
       </div>
