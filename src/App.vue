@@ -23,8 +23,33 @@ export default {
 </script>
 
 <template>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+          </div>
+          <div v-for="progetto in this.projects.data">
+            {{ progetto.titolo }}
+            <br>
+            <div v-if="progetto.immagine.startsWith('http')">
 
-  <p v-for="progetto in this.projects.data">{{ progetto.titolo }}</p>
+              <img :src="progetto.immagine" alt="">
+            </div>
+            <div v-else>
+
+              <img :src="url + 'storage/' + progetto.immagine" alt="">
+            </div>
+            <br>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
 
 </template>
 
