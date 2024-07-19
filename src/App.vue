@@ -14,6 +14,7 @@ export default {
 <template>
 
   <PageCard />
+  <router-view></router-view>
 
 </template>
 
