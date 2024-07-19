@@ -4,7 +4,11 @@ import PageCard from '../components/PageCard.vue';
 
 
 export default {
-    name: 'AppProjects'
+    name: 'AppProjects',
+
+    components: {
+        PageCard
+    },
 }
 
 </script>
