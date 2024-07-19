@@ -30,16 +30,19 @@ export default {
         <div v-for="progetto in this.projects.data">
 
           <div class="card" style="width: 18rem;">
-            <div v-if="progetto.immagine.startsWith('http')">
 
-              <img :src="progetto.immagine" class="card-img-top" alt="">
-            </div>
-            <div v-else>
-
-              <img :src="url + 'storage/' + progetto.immagine" class="card-img-top" alt="">
-            </div>
             <div class="card-body">
-              <p class="card-text">{{ progetto.titolo }}.</p>
+              <p class="card-text">
+                {{ progetto.titolo }}
+              <div v-if="progetto.immagine.startsWith('http')">
+
+                <img :src="progetto.immagine" class="card-img-top" alt="">
+              </div>
+              <div v-else>
+
+                <img :src="url + 'storage/' + progetto.immagine" class="card-img-top" alt="">
+              </div>
+              </p>
             </div>
           </div>
 
