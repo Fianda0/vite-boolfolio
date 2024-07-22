@@ -4,6 +4,7 @@ import AppHome from "./View/AppHome.vue";
 import AppAbout from "./View/AppAbout.vue";
 import AppContacts from "./View/AppContacts.vue";
 import AppProjects from "./View/AppProjects.vue";
+import SingolCard from "./View/SingolCard.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -25,8 +26,13 @@ const router = createRouter({
         },
         {
             path: '/projects',
-            name: 'projecst',
+            name: 'projects',
             component: AppProjects
+        },
+        {
+            path: '/projects/:id',
+            name: 'project',
+            component: SingolCard
         },
     ]
 })
