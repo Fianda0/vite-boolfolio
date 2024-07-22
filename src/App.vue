@@ -1,10 +1,10 @@
 <script>
-import PageCard from './components/PageCard.vue'
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    PageCard
+    AppHeader
   },
 
 }
@@ -13,7 +13,8 @@ export default {
 
 <template>
 
-  <router-view></router-view>
+  <AppHeader />
+  <router-view />
 
 </template>
 
