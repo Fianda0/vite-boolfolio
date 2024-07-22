@@ -40,6 +40,10 @@ export default {
                                 <img :src="url + 'storage/' + progetto.immagine" class="card-img-top" alt="">
                             </div>
                             </p>
+                            <div>
+                                <router-link :to="{ name: 'project', params: { id: progetto.id } }">read
+                                    more</router-link>
+                            </div>
                         </div>
                     </div>
 

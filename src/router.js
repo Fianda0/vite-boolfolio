@@ -30,7 +30,7 @@ const router = createRouter({
             component: AppProjects
         },
         {
-            path: '/projects/:id',
+            path: '/project/:id',
             name: 'project',
             component: SingolCard
         },
